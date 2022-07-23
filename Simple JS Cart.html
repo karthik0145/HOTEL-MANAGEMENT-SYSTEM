@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+        table {
+          border-collapse: collapse;
+          width:400px;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      
+      
+        }
+        table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        -ms-transform: scale(1.5); /* IE 9 */
+            -webkit-transform: scale(1.5); /* Safari 3-8 */
+            transform: scale(1.01); 
+      }
+      td:hover { background-image: linear-gradient(to right, #6B8DD6, skyblue,skyblue, skyblue, #6B8DD6 );}
+        th, td {
+          text-align: center;
+          padding: 8px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          font-weight: bold;
+        }
+        
+        tr:nth-child(even){background-color: skyblue}
+        tr:nth-child(odd){background-color:rgb(109, 195, 230)}
+        
+        th {
+          
+          color: white;
+        }</style>
+       
+        <title>Simple JS Cart</title>
+        
+       
+       
+      
+      
+      <!-- jQuery library -->
+      <script src="./Simple JS Cart_files/jquery.min.js.download"></script>
+      
+      <!-- Latest compiled JavaScript -->
+      <script src="./Simple JS Cart_files/bootstrap.min.js.download"></script>
+         
+         
+      
+      
+      
+      <script src="./Simple JS Cart_files/smtp.js.download"></script>
+    
+      <script type="text/javascript">
+        function sendEmail() {
+          Email.send({
+            Host: "smtp.gmail.com",
+            Username: "adarshjayanhello@gmail.com",
+            Password: "namastelondon",
+            To: "karthikshriram4509@gmail.com",
+            From: "adarshjayanhello@gmail.com",
+            Subject: "Sending Email using javascript",
+            Body: "Well that was easy!!",
+          })
+            .then(function (message) {
+              alert("mail sent successfully")
+            });
+        }
+      </script>
+        <style>.mySlides {display:none;}
+          
+          
+          #loginbox{
+              width: 320px;
+              height: 750px;
+              opacity: 0.95;
+              background:beige;        color: #fff;
+              top:40%;
+              right:0%;
+              font-family: 'Times New Roman', Times, serif;
+              color: black;
+              font-weight: bold;
+              font-size: 20px;
+              border:black;
+              float:right;
+              font-size: 15px;
+                border: 5px 5px 5px 5px;
+              position:fixed;
+              transform: translate(-50%,-50%);
+              box-sizing: border-box;
+              padding: 70px 30px;
+              border-width:2px;
+    border-style:solid;
+    border-color:black;
+          }
+          
+          
+          
+          #immg1{
+            
+            top:80%;
+            right:12%;
+            float:left;
+            display:none;
+        
+            height: 40px;
+            width:24x;
+            position:fixed;
+            
+            
+        }
+          
+       </style>
+       <style>.mySlides {display:none;}
+      
+      
+        #loginbox{
+            width: 320px;
+            height: 560px;
+            opacity: 0.95;
+            background:white;        color: #fff;
+            top:40%;
+            right:0%;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            border:black;
+            float:right;
+              border: 5px 5px 5px 5px;
+            position:fixed;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+            z-index: 9;
+            border-width:2px;
+  border-style:solid;
+  border-color:black;
+        }
+        
+        
+        
+        #immg1{
+          
+          top:80%;
+          right:12%;
+          float:left;
+          display:none;
+          z-index: 9;
+          height: 40px;
+          width:24x;
+          position:fixed;
+          
+          
+      }
+        
+     </style>
+  
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Askbootstrap">
+    <meta name="author" content="Askbootstrap">
+ 
+    <title>Door Dining - Online Food Ordering</title>
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="./Simple JS Cart_files/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="./Simple JS Cart_files/slick-theme.min.css">
+    <!-- Feather Icon-->
+    <link href="./Simple JS Cart_files/feather.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap core CSS -->
+    <link href="./Simple JS Cart_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./Simple JS Cart_files/hstyle.css" rel="stylesheet">
+    <!-- Sidebar CSS -->
+    <link href="./Simple JS Cart_files/demo.css" rel="stylesheet">
+<style id="hc-offcanvas-1-style">.hc-offcanvas-nav.hc-nav-1 { display: block; }
+.hc-nav-original.hc-nav-1 { display: none; }
+.hc-nav-trigger.hc-nav-1 { display: block; }
+.hc-offcanvas-nav.hc-nav-1 .nav-container { width: 280px; }
+.hc-offcanvas-nav.hc-nav-1.nav-position-left .nav-container { transform: translate3d(-280px, 0, 0); }
+.hc-offcanvas-nav.hc-nav-1.nav-position-right .nav-container { transform: translate3d(280px, 0, 0); }
+.hc-offcanvas-nav.hc-nav-1.nav-position-top .nav-container { transform: translate3d(0, -696px, 0); }
+.hc-offcanvas-nav.hc-nav-1.nav-position-bottom .nav-container { transform: translate3d(0, 696px, 0); }
+.hc-offcanvas-nav.hc-nav-1.nav-levels-overlap.nav-position-left li.level-open > .nav-wrapper { transform: translate3d(-40px,0,0); }
+.hc-offcanvas-nav.hc-nav-1.nav-levels-overlap.nav-position-right li.level-open > .nav-wrapper { transform: translate3d(40px,0,0); }
+.hc-offcanvas-nav.hc-nav-1.nav-levels-overlap.nav-position-top li.level-open > .nav-wrapper { transform: translate3d(0,-40px,0); }
+.hc-offcanvas-nav.hc-nav-1.nav-levels-overlap.nav-position-bottom li.level-open > .nav-wrapper { transform: translate3d(0,40px,0); }
+</style></head>
+                            
+                    
+
+    <div id="loginbox">
+          
+        <p style="background-color: #6B8DD6;">CART</p><br>
+                <p></p><ul style="color: black;background-color:#6B8DD6;font-size: 17px;" id="order"></ul>
+                <form>
+                    
+                    
+                    
+                   
+                    <input type="button" class="button2" id="bbutton" value="HIDE CART" onclick="sup()"><br><br>
+                   
+                   
+                </form>
+
+                
+            </div></div><p style="background-color:white;font-family: &#39;Courier New&#39;, Courier, monospace;text-align:center;font-size: 17px;font-weight:bold ;" id="aa"></p>
+
+
+<div id="immg1"><input type="button" value="ORDER NOW" "="" id="push1" style="border: readius 20px;"></div>
+
+    <header class="section-header">
+        <section class="header-main shadow-sm bg-black">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-1">
+
+                            <img alt="#" class="img-fluid" src="./Simple JS Cart_files/logo.png">
+                        </a>
+                        <!-- brand-wrap.// -->
+                    </div>
+                    <div class="col-3 d-flex align-items-center m-none">
+                        <div class="dropdown mr-3">
+                         
+                                <div><i class="feather-map-pin mr-2 bg-light rounded-pill p-2 icofont-size"></i></div>
+                                <div>
+                                    <p class="text-muted mb-0 small">Select Location</p>
+                                   
+                                </div>
+                            </a>
+                            <div class="dropdown-menu p-0 drop-loc" aria-labelledby="navbarDropdown">
+                                <div class="osahan-country">
+                                    <div class="search_location bg-primary p-3 text-right">
+                                        <div class="input-group rounded shadow-sm overflow-hidden">
+                                            <div class="input-group-prepend">
+                                                <button class="border-0 btn btn-outline-secondary text-dark bg-white btn-block"><i class="feather-search"></i></button>
+                                            </div>
+                                            <input type="text" class="shadow-none border-0 form-control" placeholder="Enter Your Location">
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border-bottom">
+                                       
+                                         
+                                        </a>
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col.// -->
+                    <div class="col-8">
+                        <div class="d-flex align-items-center justify-content-end pr-5">
+                            <!-- search -->
+                         
+                                <div class="icon d-flex align-items-center">
+                                    <i class="feather-search h6 mr-2 mb-0" style="color: white;"></i> <span style="color: white;">Search</span>
+                                </div>
+                            </a>
+                            <!-- offers -->
+                           
+                                <div class="icon d-flex align-items-center">
+                                   
+                                </div>
+                            </a>
+                            <!-- signin -->
+                            
+                                <div class="icon d-flex align-items-center">
+                                 
+                                </div>
+                            </a>
+                            <!-- my account -->
+                            <div class="dropdown mr-4 m-none" style="color: white;">
+                               
+                                    <img alt="#" src="./Simple JS Cart_files/user2.png" class="img-fluid rounded-circle header-user mr-2 header-user"> Profile
+                                </a>
+                               
+                            </div>
+                            <!-- signin -->
+                            <a href="" onclick="sup1(); return false;" class="widget-header mr-4 text-dark">
+                                <div class="icon d-flex align-items-center">
+                                    <i class="feather-shopping-cart h6 mr-2 mb-0" style="color: white;"></i> <span style="color: white;">Cart</span>
+                                </div>
+                            </a>
+                            <
+                                <span></span>
+                            </a>
+                        </div>
+                        <!-- widgets-wrap.// -->
+                    </div>
+                    <!-- col.// -->
+                </div>
+                <!-- row.// -->
+            </div>
+            <!-- container.// -->
+        </section>
+        <!-- header-main .// -->
+    </header>
+    <!--<div class="d-none">
+        <div class="bg-primary p-3 d-flex align-items-center">
+            <a class="toggle togglew toggle-2" href="#"><span></span></a>
+            <h4 class="font-weight-bold m-0 text-white">Search</h4>
+        </div>
+    </div>
+    <div class="osahan-popular">
+        <!-- Most popular 
+        <div class="container">
+            <div class="search py-5">
+                <div class="input-group mb-4">
+                    <input type="text" class="form-control form-control-lg input_search border-right-0" id="inlineFormInputGroup" value="Osahan eats...">
+                    <div class="input-group-prepend">
+                        <div class="btn input-group-text bg-white border_search border-left-0 text-primary"><i class="feather-search"></i></div>
+                    </div>
+                </div>
+                <!-- nav tabs 
+                <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active border-0 bg-light text-dark rounded" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="feather-home mr-2"></i>Restaurants (8)</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link border-0 bg-light text-dark rounded ml-3" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="feather-disc mr-2"></i>Dishes (23)</a>
+                    </li>
+                </ul>-->
+                
+
+    
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <link rel="stylesheet" href="./Simple JS Cart_files/app.css">
+    
+    
+        <div class="container" id="profil">
+            <h1>✨Food Search ✨</h1>
+            <div id="searchWrapper">
+                <input type="text" name="searchBar" id="searchBar" placeholder="search for a character">
+            </div>
+            <ul id="charactersList">
+                <li class="character">
+    
+                    <h3>aa</h3>
+                    <p>Restaurant: annapoorna</p>
+                    <b>Price: undefined</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;aa&#39;,undefined)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;aa&#39;,undefined)">add</button>
+                  
+                </li>
+            
+                <li class="character">
+    
+                    <h3>idly</h3>
+                    <p>Restaurant: Adayar Anandha Bhavan</p>
+                    <b>Price: 48</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;idly&#39;,48)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;idly&#39;,48)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/idly.jpg?alt=media&amp;token=75626b97-2c3a-483b-be31-78d50f43395d">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>ghee roast</h3>
+                    <p>Restaurant: Adayar Anandha Bhavan</p>
+                    <b>Price: 80</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;ghee roast&#39;,80)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;ghee roast&#39;,80)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/gheeroast.jpg?alt=media&amp;token=7480ff3b-c10a-44ef-9877-a73533a88434">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>pongal</h3>
+                    <p>Restaurant: Adayar Anandha Bhavan</p>
+                    <b>Price: 60</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;pongal&#39;,60)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;pongal&#39;,60)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/pongal1.jpg?alt=media&amp;token=7454f017-5b05-4653-8199-a4d3fbf7c31c">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>masala dosa</h3>
+                    <p>Restaurant: Adayar Anandha Bhavan</p>
+                    <b>Price: 80</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;masala dosa&#39;,80)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;masala dosa&#39;,80)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/dosa1.jpg?alt=media&amp;token=c712d638-3a24-4994-8b2a-4e8cf8b621f3">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>vada</h3>
+                    <p>Restaurant: Adayar Anandha Bhavan</p>
+                    <b>Price: 45</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;vada&#39;,45)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;vada&#39;,45)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/vada.jpg?alt=media&amp;token=d43967d1-824d-4956-8c78-0eb97d87680a">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>panner kebab</h3>
+                    <p>Restaurant: Adayar Anandha Bhavan</p>
+                    <b>Price: 170</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;panner kebab&#39;,170)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;panner kebab&#39;,170)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/panner%20kebab.jpg?alt=media&amp;token=09cb4e5d-0dd9-4c2d-9b5d-0d4a6a4dfb35">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>veg burger</h3>
+                    <p>Restaurant: Adayar Anandha Bhavan</p>
+                    <b>Price: 100</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;veg burger&#39;,100)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;veg burger&#39;,100)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/veg%20burger.jpg?alt=media&amp;token=238d01a9-8f39-4ec1-b59d-b536db1324fa">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>spring roll</h3>
+                    <p>Restaurant: Adayar Anandha Bhavan</p>
+                    <b>Price: 160</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;spring roll&#39;,160)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;spring roll&#39;,160)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/springroll.jpg?alt=media&amp;token=937260fb-2005-4dd6-bff3-97e491c4dc88">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>naan</h3>
+                    <p>Restaurant: Adayar Anandha Bhavan</p>
+                    <b>Price: 40</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;naan&#39;,40)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;naan&#39;,40)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/naan.jpg?alt=media&amp;token=d06dd9b6-5b98-4800-9d17-d6edd0560940">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>veg curry</h3>
+                    <p>Restaurant: Adayar Anandha Bhavan</p>
+                    <b>Price: 140</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;veg curry&#39;,140)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;veg curry&#39;,140)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/veg%20curry.jpg?alt=media&amp;token=b29c6416-0647-4fc6-b698-8b58d1770a8c">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>idly</h3>
+                    <p>Restaurant: Sree Anapoorna</p>
+                    <b>Price: 40</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;idly&#39;,40)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;idly&#39;,40)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/idly2.jpg?alt=media&amp;token=70ee389e-b78f-48f6-a8e9-1ae55bdcdae9">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>bhel puri</h3>
+                    <p>Restaurant: Sree Anapoorna</p>
+                    <b>Price: 50</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;bhel puri&#39;,50)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;bhel puri&#39;,50)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/bhelpuri.jpg?alt=media&amp;token=7356d479-2315-4ab9-b728-57f54b288413">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>uthapam</h3>
+                    <p>Restaurant: Sree Anapoorna</p>
+                    <b>Price: 70</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;uthapam&#39;,70)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;uthapam&#39;,70)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/uthapam.jpg?alt=media&amp;token=e51e9e23-fefb-447d-a7b4-50d3ff252214">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chapati</h3>
+                    <p>Restaurant: Sree Anapoorna</p>
+                    <b>Price: 45</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chapati&#39;,45)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chapati&#39;,45)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/chapathi.jpg?alt=media&amp;token=b6e06c49-7754-44a3-a9af-7185aa84bdd3">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>puri</h3>
+                    <p>Restaurant: Sree Anapoorna</p>
+                    <b>Price: 55</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;puri&#39;,55)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;puri&#39;,55)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/puti.jpg?alt=media&amp;token=ff0c7b25-53fc-4862-8d46-f71b38e419f0">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>dal makhni</h3>
+                    <p>Restaurant: Sree Anapoorna</p>
+                    <b>Price: 130</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;dal makhni&#39;,130)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;dal makhni&#39;,130)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/dal%20makhani.jpg?alt=media&amp;token=27f794b0-95ab-4deb-9de0-c21e58dc2363">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>tomato curry</h3>
+                    <p>Restaurant: Sree Anapoorna</p>
+                    <b>Price: 110</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;tomato curry&#39;,110)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;tomato curry&#39;,110)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/tomato%20curry.jpg?alt=media&amp;token=55990df4-a8d5-46a2-91a1-a4a75c4ac109">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>mushroom 65</h3>
+                    <p>Restaurant: Sree Anapoorna</p>
+                    <b>Price: 110</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;mushroom 65&#39;,110)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;mushroom 65&#39;,110)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/mushroom%2065.jpg?alt=media&amp;token=5720e12c-57e9-45f0-b84e-7b2886faaad4">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>panner tikka</h3>
+                    <p>Restaurant: Sree Anapoorna</p>
+                    <b>Price: 165</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;panner tikka&#39;,165)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;panner tikka&#39;,165)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/panner%20tikka.jpg?alt=media&amp;token=29f0e2f7-6f1e-4699-a08e-9ba299f4aa9b">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>veg crispy</h3>
+                    <p>Restaurant: Sree Anapoorna</p>
+                    <b>Price: 160</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;veg crispy&#39;,160)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;veg crispy&#39;,160)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/veg%20crispy.jpg?alt=media&amp;token=1eef75f8-99ea-43f6-b179-a558e97d1cbf">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken biryani</h3>
+                    <p>Restaurant: paradise</p>
+                    <b>Price: 210</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken biryani&#39;,210)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken biryani&#39;,210)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/chicken%20biryani.jpg?alt=media&amp;token=7ee06d37-81e9-488b-a42a-c9f4b4c30e50">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken tikka</h3>
+                    <p>Restaurant: paradise</p>
+                    <b>Price: 230</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken tikka&#39;,230)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken tikka&#39;,230)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/chicken%20tikka.jpg?alt=media&amp;token=359b6dc7-2bda-4f35-ab37-154cf8c2fff0">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>mutton biryani</h3>
+                    <p>Restaurant: paradise</p>
+                    <b>Price: 220</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;mutton biryani&#39;,220)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;mutton biryani&#39;,220)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/mutton%20biryani.jpg?alt=media&amp;token=1dcc53a4-ca7d-401d-8b66-5f64ad0de82c">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>mutton pepper fry</h3>
+                    <p>Restaurant: paradise</p>
+                    <b>Price: 250</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;mutton pepper fry&#39;,250)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;mutton pepper fry&#39;,250)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/mutton%20biryani.jpg?alt=media&amp;token=1dcc53a4-ca7d-401d-8b66-5f64ad0de82c">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>fish with garlic</h3>
+                    <p>Restaurant: paradise</p>
+                    <b>Price: 300</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;fish with garlic&#39;,300)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;fish with garlic&#39;,300)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/fish.jpg?alt=media&amp;token=55ccd042-dba2-49fe-a5e2-f0386eb3c4fc">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>fish fillet</h3>
+                    <p>Restaurant: paradise</p>
+                    <b>Price: 350</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;fish fillet&#39;,350)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;fish fillet&#39;,350)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/fish%20fillet.jpg?alt=media&amp;token=76b0d4fd-03e7-4779-88cc-34385c8790ed">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>garlic shrimp</h3>
+                    <p>Restaurant: paradise</p>
+                    <b>Price: 290</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;garlic shrimp&#39;,290)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;garlic shrimp&#39;,290)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/garlic%20shrimp.jpg?alt=media&amp;token=103ced8d-90a4-4dec-9572-cdf751f5c2b4">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>grilled shrimp</h3>
+                    <p>Restaurant: paradise</p>
+                    <b>Price: 320</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;grilled shrimp&#39;,320)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;grilled shrimp&#39;,320)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/grilled%20shrimp.jpg?alt=media&amp;token=875749d2-165f-4b50-8104-6f5f5475cdf4">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>banana dessert</h3>
+                    <p>Restaurant: paradise</p>
+                    <b>Price: 320</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;banana dessert&#39;,320)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;banana dessert&#39;,320)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/banana%20desert.jpg?alt=media&amp;token=c684beb6-2184-4729-a435-159b7de5bc1d">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>yogurt sundae</h3>
+                    <p>Restaurant: paradise</p>
+                    <b>Price: 180</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;yogurt sundae&#39;,180)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;yogurt sundae&#39;,180)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/yogurt%20sundae.jpg?alt=media&amp;token=fb4dd8b0-3a8b-491e-9b25-860cee360bc1">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>idly</h3>
+                    <p>Restaurant: madurai veedu</p>
+                    <b>Price: 30</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;idly&#39;,30)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;idly&#39;,30)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/idlly3.jpg?alt=media&amp;token=e98cb158-9550-4c5b-ae49-9419e77ba9ca">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>parotta</h3>
+                    <p>Restaurant: madurai veedu</p>
+                    <b>Price: 40</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;parotta&#39;,40)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;parotta&#39;,40)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/parota.jpg?alt=media&amp;token=ebe1f2d4-633c-431f-b103-668ebbc9010b">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>ghee dosa</h3>
+                    <p>Restaurant: madurai veedu</p>
+                    <b>Price: 55</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;ghee dosa&#39;,55)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;ghee dosa&#39;,55)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/ghee%20dosa.jpg?alt=media&amp;token=bdf2c4e6-4c42-418f-b738-0cd7cb665ceb">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>poha</h3>
+                    <p>Restaurant: madurai veedu</p>
+                    <b>Price: 70</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;poha&#39;,70)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;poha&#39;,70)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/poha.jpg?alt=media&amp;token=6c0fbffb-915b-442e-b54f-84d4966849b4">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>samosa</h3>
+                    <p>Restaurant: madurai veedu</p>
+                    <b>Price: 20</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;samosa&#39;,20)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;samosa&#39;,20)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/samosa.jpg?alt=media&amp;token=1dc73c7a-7b01-439e-a888-0a8c38c2c1c8">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>bajji</h3>
+                    <p>Restaurant: madurai veedu</p>
+                    <b>Price: 25</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;bajji&#39;,25)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;bajji&#39;,25)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/bajji.jpg?alt=media&amp;token=226a961b-920a-4f59-9c78-af26bf59c9c4">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>cheese cake</h3>
+                    <p>Restaurant: madurai veedu</p>
+                    <b>Price: 90</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;cheese cake&#39;,90)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;cheese cake&#39;,90)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/cheesecake.jpg?alt=media&amp;token=21965499-8d2d-4681-85e1-ed3cf542dce4">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>egg curry</h3>
+                    <p>Restaurant: madurai veedu</p>
+                    <b>Price: 100</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;egg curry&#39;,100)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;egg curry&#39;,100)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/egg%20curry.jpg?alt=media&amp;token=c5f1c940-4cec-48d5-b65c-79d7940fa76c">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>blueberry cake</h3>
+                    <p>Restaurant: madurai veedu</p>
+                    <b>Price: 90</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;blueberry cake&#39;,90)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;blueberry cake&#39;,90)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/blueberry.jpg?alt=media&amp;token=e989d70e-3939-49a3-91c7-48cdd8cfc577">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>potato curry</h3>
+                    <p>Restaurant: madurai veedu</p>
+                    <b>Price: 80</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;potato curry&#39;,80)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;potato curry&#39;,80)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/potato%20curry.jpg?alt=media&amp;token=662cf555-0df2-4873-a3a8-c47d572bc7ef">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>tortilla</h3>
+                    <p>Restaurant: iron hill</p>
+                    <b>Price: 180</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;tortilla&#39;,180)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;tortilla&#39;,180)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/tortilla.jpg?alt=media&amp;token=3bfa0e2a-f8cb-45ad-a234-cf03a94754e7">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>nachos</h3>
+                    <p>Restaurant: iron hill</p>
+                    <b>Price: 130</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;nachos&#39;,130)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;nachos&#39;,130)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/nachos.jpg?alt=media&amp;token=b32beb69-20ca-4d8b-9fee-053008253492">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>quesadilla</h3>
+                    <p>Restaurant: iron hill</p>
+                    <b>Price: 200</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;quesadilla&#39;,200)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;quesadilla&#39;,200)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/quesadilla.jpg?alt=media&amp;token=20d5f970-ff3c-43d6-bd9b-a70954ccb206">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken biryani</h3>
+                    <p>Restaurant: iron hill</p>
+                    <b>Price: 180</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken biryani&#39;,180)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken biryani&#39;,180)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/chicken%20biryani.jpg?alt=media&amp;token=7ee06d37-81e9-488b-a42a-c9f4b4c30e50">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken tikka</h3>
+                    <p>Restaurant: iron hill</p>
+                    <b>Price: 215</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken tikka&#39;,215)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken tikka&#39;,215)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/chicken%20tikka.jpg?alt=media&amp;token=359b6dc7-2bda-4f35-ab37-154cf8c2fff0">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>fish fillet</h3>
+                    <p>Restaurant: iron hill</p>
+                    <b>Price: 250</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;fish fillet&#39;,250)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;fish fillet&#39;,250)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/fish%20fillet.jpg?alt=media&amp;token=76b0d4fd-03e7-4779-88cc-34385c8790ed">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>garlic fish</h3>
+                    <p>Restaurant: iron hill</p>
+                    <b>Price: 230</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;garlic fish&#39;,230)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;garlic fish&#39;,230)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/fish.jpg?alt=media&amp;token=55ccd042-dba2-49fe-a5e2-f0386eb3c4fc">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>garlic shrimp</h3>
+                    <p>Restaurant: iron hill</p>
+                    <b>Price: 300</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;garlic shrimp&#39;,300)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;garlic shrimp&#39;,300)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/garlic%20shrimp.jpg?alt=media&amp;token=103ced8d-90a4-4dec-9572-cdf751f5c2b4">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>mutton biryani</h3>
+                    <p>Restaurant: iron hill</p>
+                    <b>Price: 260</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;mutton biryani&#39;,260)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;mutton biryani&#39;,260)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/mutton%20biryani.jpg?alt=media&amp;token=1dcc53a4-ca7d-401d-8b66-5f64ad0de82c">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>mocktail</h3>
+                    <p>Restaurant: iron hill</p>
+                    <b>Price: 150</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;mocktail&#39;,150)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;mocktail&#39;,150)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/mocktail.jpg?alt=media&amp;token=da169c36-3980-413a-8fbd-2baa4eb6fb79">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken wings</h3>
+                    <p>Restaurant: kfc</p>
+                    <b>Price: 150</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken wings&#39;,150)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken wings&#39;,150)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/wings.jpg?alt=media&amp;token=01417c27-1d14-45d0-be9f-4d23ddab1b8d">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken popcorn</h3>
+                    <p>Restaurant: kfc</p>
+                    <b>Price: 120</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken popcorn&#39;,120)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken popcorn&#39;,120)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/popcorn.jpg?alt=media&amp;token=98099b75-7837-46b4-9d23-73f93dee7f13">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken tender box</h3>
+                    <p>Restaurant: kfc</p>
+                    <b>Price: 210</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken tender box&#39;,210)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken tender box&#39;,210)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/kfc%20tender%20box.jpg?alt=media&amp;token=185734cc-7881-4e15-9d44-c8cd11762ef8">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken burger</h3>
+                    <p>Restaurant: kfc</p>
+                    <b>Price: 140</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken burger&#39;,140)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken burger&#39;,140)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/chicken%20burger.jpg?alt=media&amp;token=f480459e-517d-4757-9a14-a81f42a3d4c4">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken strips</h3>
+                    <p>Restaurant: kfc</p>
+                    <b>Price: 90</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken strips&#39;,90)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken strips&#39;,90)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/strips.jpg?alt=media&amp;token=7667a0a3-d376-4315-808a-23513b2b01dd">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken nuggets</h3>
+                    <p>Restaurant: kfc</p>
+                    <b>Price: 160</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken nuggets&#39;,160)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken nuggets&#39;,160)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/popcorn%20nuggets.jpg?alt=media&amp;token=cf3225ef-a3f6-4368-819f-e40114907445">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>zinger burger</h3>
+                    <p>Restaurant: kfc</p>
+                    <b>Price: 170</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;zinger burger&#39;,170)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;zinger burger&#39;,170)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/zinger%20burger.jpg?alt=media&amp;token=f99e18a1-be6a-411b-ab4c-1c3a7ad90889">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>mini chicken combo</h3>
+                    <p>Restaurant: kfc</p>
+                    <b>Price: 200</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;mini chicken combo&#39;,200)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;mini chicken combo&#39;,200)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/mini%20combo.jpg?alt=media&amp;token=ee78710f-4908-407d-b0b6-8474dcc384a1">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>pepsi</h3>
+                    <p>Restaurant: kfc</p>
+                    <b>Price: 65</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;pepsi&#39;,65)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;pepsi&#39;,65)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/pepsi.jpg?alt=media&amp;token=d6c29105-ee3d-43b0-939f-40c4684c554f">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken bucket</h3>
+                    <p>Restaurant: kfc</p>
+                    <b>Price: 310</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken bucket&#39;,310)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken bucket&#39;,310)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/chicken%20joints.jpg?alt=media&amp;token=b11e864e-aac9-4b54-b3aa-acbecab2d17a">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chat</h3>
+                    <p>Restaurant: chaat hub</p>
+                    <b>Price: 30</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chat&#39;,30)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chat&#39;,30)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/chat.jpg?alt=media&amp;token=ef68b4bc-2c23-470a-9896-75620bdcab7c">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>samosa chat</h3>
+                    <p>Restaurant: chaat hub</p>
+                    <b>Price: 40</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;samosa chat&#39;,40)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;samosa chat&#39;,40)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/samosa%20caht.jpg?alt=media&amp;token=3ddcdba8-59ab-468f-90d7-d96ec2116648">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>panipuri</h3>
+                    <p>Restaurant: chaat hub</p>
+                    <b>Price: 25</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;panipuri&#39;,25)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;panipuri&#39;,25)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/panipuri.jpg?alt=media&amp;token=4b1ac3a4-3996-4370-91aa-6704b842f44a">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>dahi puri</h3>
+                    <p>Restaurant: chaat hub</p>
+                    <b>Price: 40</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;dahi puri&#39;,40)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;dahi puri&#39;,40)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/dahiputi.jpg?alt=media&amp;token=85f68515-14c1-46e2-86a7-50a78253e9b4">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>masala puri</h3>
+                    <p>Restaurant: chaat hub</p>
+                    <b>Price: 40</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;masala puri&#39;,40)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;masala puri&#39;,40)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/masala%20puri.jpg?alt=media&amp;token=cad3511e-8c09-46bd-ae45-544d7e6e44ba-ordering-system-d60d1.appspot.com/o/bbq.jpg?alt=media&amp;token=3e006104-21ae-4756-bcdc-cfdd4559e3ac">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>paapdi chat</h3>
+                    <p>Restaurant: chaat hub</p>
+                    <b>Price: 45</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;paapdi chat&#39;,45)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;paapdi chat&#39;,45)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/paapdi%20chat.jpg?alt=media&amp;token=cd7400c3-5248-4b38-b143-31aa188f3bc8">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>aloo puri</h3>
+                    <p>Restaurant: chaat hub</p>
+                    <b>Price: 30</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;aloo puri&#39;,30)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;aloo puri&#39;,30)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/aloo%20puti.jpg?alt=media&amp;token=e946de87-02d1-4f5c-9353-ee2accee7e6f">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>pakora chat</h3>
+                    <p>Restaurant: chaat hub</p>
+                    <b>Price: 40</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;pakora chat&#39;,40)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;pakora chat&#39;,40)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/pakora%20chat.jpg?alt=media&amp;token=c9c661f5-c974-43cc-8bd5-03c8b2000e1d">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>pav bhaji</h3>
+                    <p>Restaurant: chaat hub</p>
+                    <b>Price: 60</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;pav bhaji&#39;,60)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;pav bhaji&#39;,60)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/pav.jpg?alt=media&amp;token=ab2b4d9d-cfa6-4745-9656-5a8fa1e13b11">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>panner pav bhaji</h3>
+                    <p>Restaurant: chaat hub</p>
+                    <b>Price: 70</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;panner pav bhaji&#39;,70)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;panner pav bhaji&#39;,70)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/panner%20pav.jpg?alt=media&amp;token=c6ebdc82-6353-44fb-a704-4711d4b22d1d">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>afghani chicken</h3>
+                    <p>Restaurant: barbecue grill</p>
+                    <b>Price: 270</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;afghani chicken&#39;,270)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;afghani chicken&#39;,270)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/afghani%20chicken.jpg?alt=media&amp;token=c9a97485-96f6-4d9a-a42f-f4dcb677b44c">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>tandoori chicken</h3>
+                    <p>Restaurant: barbecue grill</p>
+                    <b>Price: 250</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;tandoori chicken&#39;,250)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;tandoori chicken&#39;,250)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/tandoori%20chicken.jpg?alt=media&amp;token=6467e5f8-dcc2-4146-b899-0ec889fa51a5">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>bbq chicken</h3>
+                    <p>Restaurant: barbecue grill</p>
+                    <b>Price: 320</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;bbq chicken&#39;,320)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;bbq chicken&#39;,320)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/bbq.jpg?alt=media&amp;token=3e006104-21ae-4756-bcdc-cfdd4559e3ac">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>grill chicken</h3>
+                    <p>Restaurant: barbecue grill</p>
+                    <b>Price: 240</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;grill chicken&#39;,240)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;grill chicken&#39;,240)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/grill%20chicken.jpg?alt=media&amp;token=6d24b0f6-31ae-465b-b719-327273c5cc6a">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>grilled lemon chicken</h3>
+                    <p>Restaurant: barbecue grill</p>
+                    <b>Price: 240</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;grilled lemon chicken&#39;,240)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;grilled lemon chicken&#39;,240)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/lemon%20chicken.jpg?alt=media&amp;token=3321ffaf-7950-4ab3-8d1c-524ccd2f40a8">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>chicken shawarma</h3>
+                    <p>Restaurant: barbecue grill</p>
+                    <b>Price: 120</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;chicken shawarma&#39;,120)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;chicken shawarma&#39;,120)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/shawarma.jpg?alt=media&amp;token=0d91175e-1518-4ff8-b87a-1ff38256c8a7">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>alfaham chicken</h3>
+                    <p>Restaurant: barbecue grill</p>
+                    <b>Price: 350</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;alfaham chicken&#39;,350)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;alfaham chicken&#39;,350)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/alfaham%20chicken.jpg?alt=media&amp;token=88cd7892-e056-4689-bb55-46817937770d">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>whole roasted chicken</h3>
+                    <p>Restaurant: barbecue grill</p>
+                    <b>Price: 450</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;whole roasted chicken&#39;,450)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;whole roasted chicken&#39;,450)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/roasted%20chicken.jpg?alt=media&amp;token=a48e7fa2-a1b5-46c8-9c2e-56f4f53cc5c8">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>kalmi kabab</h3>
+                    <p>Restaurant: barbecue grill</p>
+                    <b>Price: 200</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;kalmi kabab&#39;,200)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;kalmi kabab&#39;,200)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/kalmi%20kabab.jpg?alt=media&amp;token=4c89c1f7-fe22-4232-babf-656504e11b41">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>tangdi kabab</h3>
+                    <p>Restaurant: barbecue grill</p>
+                    <b>Price: 220</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;tangdi kabab&#39;,220)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;tangdi kabab&#39;,220)">add</button>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/hotel-ordering-system-d60d1.appspot.com/o/tangdi%20kabab.jpg?alt=media&amp;token=ddc76a2b-6712-43df-9d70-afa6edc3e6d6">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>cheesy pizza</h3>
+                    <p>Restaurant: Dominoz</p>
+                    <b>Price: undefined</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;cheesy pizza&#39;,undefined)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;cheesy pizza&#39;,undefined)">add</button>
+                    <img src="https://www.google.com/search?q=cheesy+pizza+images&amp;rlz=1C1UEAD_enIN974IN974&amp;sxsrf=ALiCzsZZu0DAAIY5SKSW2jRQy4q2zjNH4A:1652749494698&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;vet=1&amp;fir=8ug16F5m4hp6fM%252CWYOf39ozq1-2MM%252C_%253B0I8KubcqJWtJdM%252Cq_HygTXWX3sy3M%252C_%253BzZkNtxKBmLdLGM%252CL7Aj8eyAyv4rPM%252C_%253B20yIlIYxHLjIUM%252CtmNFcpp9UtA6vM%252C_%253BvQ2mhhYqYqtuCM%252C4QtKq1RtHjXg-M%252C_%253BXT3B-6Ulm-CjAM%252Cq_HygTXWX3sy3M%252C_%253BfGm3mPvRjAS9JM%252CTQqrJWUOhGoGSM%252C_%253BdZLryp3sd3d1wM%252CKU98JUHt9mbj4M%252C_%253Bk73TQUeYiWuPDM%252Cq_HygTXWX3sy3M%252C_%253BUG3t8-3eWckIiM%252CaA2j4gEyRh6NwM%252C_%253Bq0KsAD5dz4L3nM%252CoJawyvmQBM7sAM%252C_%253BtqInUdD_NaV1qM%252Cq_HygTXWX3sy3M%252C_%253BvwKIPnA2JTVjPM%252C-WTjC5lascoz_M%252C_%253BTakAw5jNZf-xWM%252CiT-dlsof0v4NSM%252C_&amp;usg=AI4_-kT9F8OtKoK4rGhg5_HCSDbxXM6bug&amp;sa=X&amp;ved=2ahUKEwjE6Z3Uq-X3AhVvSmwGHcSdAtcQ9QF6BAgKEAE#imgrc=0I8KubcqJWtJdM">
+                </li>
+            
+                <li class="character">
+    
+                    <h3>biriyani</h3>
+                    <p>Restaurant: Anjappar</p>
+                    <b>Price: undefined</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick="remvove1(&#39;biriyani&#39;,undefined)">remvove</button>
+                    <button id="bbutton" onclick="add(&#39;biriyani&#39;,undefined)">add</button>
+                    <img src="https://www.google.com/search?gs_ssp=eJzj4tTP1Tcwjs_IMTBgdGDw4kjKLMqsTMzLBABJ2Qa_&amp;q=biriyani&amp;rlz=1C1UEAD_enIN974IN974&amp;oq=biriyani&amp;aqs=chrome.1.69i57j46i512j0i457i512j0i402j46i512j0i512l4j46i175i199i512.3878j0j15&amp;sourceid=chrome&amp;ie=UTF-8">
+                </li>
+            </ul>
+        </div>
+        
+    
+
+                <!--<div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <!-- Content Row 
+                        <div class="container mt-4 mb-4 p-0">
+                            <!-- restaurants nearby 
+                            <div class="row">
+                                <div class="col-md-3 pb-3">
+                                    <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
+                                        <div class="list-card-image">
+                                            <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i> 3.1 (300+)</span></div>
+                                            <div class="favourite-heart text-danger position-absolute"><a href="#"><i class="feather-heart"></i></a></div>
+                                            <div class="member-plan position-absolute"><span class="badge badge-dark">Promoted</span></div>
+                                            <a href="restaurant.html">
+                                                <img alt="#" src="img/popular1.png" class="img-fluid item-img w-100">
+                                            </a>
+                                        </div>
+                                        <div class="p-3 position-relative">
+                                            <div class="list-card-body">
+                                                <h6 class="mb-1"><a href="restaurant.html" class="text-black">The osahan Restaurant
+                                          </a>
+                                                </h6>
+                                                <p class="text-gray mb-1 small">• North • Hamburgers</p>
+                                                <p class="text-gray mb-1 rating">
+                                                    <ul class="rating-stars list-unstyled">
+                                                        <li>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star"></i>
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                            <div class="list-card-badge">
+                                                <span class="badge badge-danger">OFFER</span> <small>65% OSAHAN50</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 pb-3">
+                                    <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
+                                        <div class="list-card-image">
+                                            <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i> 3.1 (300+)</span></div>
+                                            <div class="favourite-heart text-danger position-absolute"><a href="#"><i class="feather-heart"></i></a></div>
+                                            <div class="member-plan position-absolute"><span class="badge badge-dark">Promoted</span></div>
+                                            <a href="restaurant.html">
+                                                <img alt="#" src="img/popular2.png" class="img-fluid item-img w-100">
+                                            </a>
+                                        </div>
+                                        <div class="p-3 position-relative">
+                                            <div class="list-card-body">
+                                                <h6 class="mb-1"><a href="restaurant.html" class="text-black">Thai Famous Indian Cuisine</a></h6>
+                                                <p class="text-gray mb-1 small">• Indian • Pure veg</p>
+                                                <p class="text-gray mb-1 rating">
+                                                    <ul class="rating-stars list-unstyled">
+                                                        <li>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star"></i>
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                            <div class="list-card-badge">
+                                                <span class="badge badge-success">OFFER</span> <small>65% off</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 pb-3">
+                                    <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
+                                        <div class="list-card-image">
+                                            <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i> 3.1 (300+)</span></div>
+                                            <div class="favourite-heart text-danger position-absolute"><a href="#"><i class="feather-heart"></i></a></div>
+                                            <div class="member-plan position-absolute"><span class="badge badge-dark">Promoted</span></div>
+                                            <a href="restaurant.html">
+                                                <img alt="#" src="img/popular3.png" class="img-fluid item-img w-100">
+                                            </a>
+                                        </div>
+                                        <div class="p-3 position-relative">
+                                            <div class="list-card-body">
+                                                <h6 class="mb-1"><a href="restaurant.html" class="text-black">The osahan Restaurant
+                                          </a>
+                                                </h6>
+                                                <p class="text-gray mb-1 small">• Hamburgers • Pure veg</p>
+                                                <p class="text-gray mb-1 rating">
+                                                    <ul class="rating-stars list-unstyled">
+                                                        <li>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star"></i>
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                            <div class="list-card-badge">
+                                                <span class="badge badge-danger">OFFER</span> <small>65% OSAHAN50</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 pb-3">
+                                    <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
+                                        <div class="list-card-image">
+                                            <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i> 3.1 (300+)</span></div>
+                                            <div class="favourite-heart text-danger position-absolute"><a href="#"><i class="feather-heart"></i></a></div>
+                                            <div class="member-plan position-absolute"><span class="badge badge-dark">Promoted</span></div>
+                                            <a href="restaurant.html">
+                                                <img alt="#" src="img/popular4.png" class="img-fluid item-img w-100">
+                                            </a>
+                                        </div>
+                                        <div class="p-3 position-relative">
+                                            <div class="list-card-body">
+                                                <h6 class="mb-1"><a href="restaurant.html" class="text-black">Bite Me Now Sandwiches</a></h6>
+                                                <p class="text-gray mb-1 small">American • Pure veg</p>
+                                                <p class="text-gray mb-1 rating">
+                                                    <ul class="rating-stars list-unstyled">
+                                                        <li>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star star_active"></i>
+                                                            <i class="feather-star"></i>
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                            <div class="list-card-badge">
+                                                <span class="badge badge-success">OFFER</span> <small>65% off</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <!-- Content Row 
+                        <div class="row d-flex align-items-center justify-content-center py-5">
+                            <div class="col-md-4 py-5">
+                                <div class="text-center py-5">
+                                    <p class="h4 mb-4"><i class="feather-search bg-primary text-white rounded p-2"></i></p>
+                                    <p class="font-weight-bold text-dark h5">Nothing found</p>
+                                    <p>we could not find anything that would match your search request, please try again.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 -->
+            
+        --&gt;
+        <!-- Footer -->
+        <div class="osahan-menu-fotter fixed-bottom bg-white px-3 py-2 text-center d-none">
+            <div class="row">
+             
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+    <!-- footer -->
+    <footer class="section-footer border-top bg-dark">
+        <div class="container">
+            <section class="footer-top padding-y py-5">
+                <div class="row pt-3">
+                    <aside class="col-md-4 footer-about">
+                        <article class="d-flex pb-3">
+                            <div><img alt="#" src="./Simple JS Cart_files/logo_web.png" class="logo-footer mr-3"></div>
+                            <div>
+                  
+                    </aside>
+                </div>
+                <!-- row.// -->
+            </section>
+
+
+            <!-- footer-top.// -->
+            <section class="footer-center border-top padding-y py-5">
+                <h6 class="title text-white">Countries</h6>
+                <div class="row">
+                    <aside class="col-sm-2 col-md-2 text-white">
+                      
+                    </aside>
+                    <aside class="col-sm-2 col-md-2 text-white">
+                        <ul class="list-unstyled hov_footer">
+                            
+                        </ul>
+                    </aside>
+                    <aside class="col-sm-2 col-md-2 text-white">
+                        <ul class="list-unstyled hov_footer">
+                          
+                        </ul>
+                    </aside>
+                </div>
+                <!-- row.// -->
+            </section>
+        </div>
+        <!-- //container -->
+        <section class="footer-copyright border-top py-3 bg-light">
+            <div class="container d-flex align-items-center">
+              
+            </div>
+        </section>
+    </footer>
+    <nav id="main-nav" class="hc-nav-original hc-nav-1">
+  
+            </li>
+           
+              
+                <ul>
+                  
+                </ul>
+            </li>
+            
+                </li>
+                <li>
+                   
+                    <ul>
+                        <li>
+                            
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                       
+                        <li data-nav-custom-content="">
+                            <div class="custom-message">
+                                You can add any custom content to your navigation items. This text is just an example.
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+        </ul>
+        <ul class="bottom-nav">
+
+            </li>
+        </ul>
+    </nav>
+    <!-- filters modal -->
+    <div class="modal fade" id="filters" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Filters</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- SORT BY -->
+                        <h6>SORT BY</h6>
+                        <div class="custom-control border-bottom px-0  custom-radio">
+                            <input type="radio" id="customRadio1f" name="location" class="custom-control-input" checked="">
+                            <label class="custom-control-label py-2 w-100 px-3" for="customRadio1f">Top Rated</label>
+                        </div>
+                        <div class="custom-control border-bottom px-0  custom-radio">
+                            <input type="radio" id="customRadio2f" name="location" class="custom-control-input">
+                            <label class="custom-control-label py-2 w-100 px-3" for="customRadio2f">Nearest Me</label>
+                        </div>
+                        <div class="custom-control border-bottom px-0  custom-radio">
+                            <input type="radio" id="customRadio3f" name="location" class="custom-control-input">
+                            <label class="custom-control-label py-2 w-100 px-3" for="customRadio3f">Cost High to Low</label>
+                        </div>
+                        <div class="custom-control border-bottom px-0  custom-radio">
+                            <input type="radio" id="customRadio4f" name="location" class="custom-control-input">
+                            <label class="custom-control-label py-2 w-100 px-3" for="customRadio4f">Cost Low to High</label>
+                        </div>
+                        <div class="custom-control border-bottom px-0  custom-radio">
+                            <input type="radio" id="customRadio5f" name="location" class="custom-control-input">
+                            <label class="custom-control-label py-2 w-100 px-3" for="customRadio5f">Most Popular</label>
+                        </div>
+                        <!-- Filter -->
+                        <h6 class="mt-4">FILTER</h6>
+                        <div class="custom-control border-bottom px-0  custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="defaultCheck1" checked="">
+                            <label class="custom-control-label py-2 w-100 px-3" for="defaultCheck1">Open Now</label>
+                        </div>
+                        <div class="custom-control border-bottom px-0  custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="defaultCheck2">
+                            <label class="custom-control-label py-2 w-100 px-3" for="defaultCheck2">Credit Cards</label>
+                        </div>
+                        <div class="custom-control border-bottom px-0  custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="defaultCheck3">
+                            <label class="custom-control-label py-2 w-100 px-3" for="defaultCheck3">Alcohol Served</label>
+                        </div>
+                        <!-- Filter -->
+                        <h6 class="mt-4">ADDITIONAL FILTERS</h6>
+                        <div class="px-3">
+                            <input type="range" class="custom-range" min="0" max="100" name="minmax">
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label>Min</label>
+                                    <input class="form-control" placeholder="$0" type="number">
+                                </div>
+                                <div class="form-group text-right col-6">
+                                    <label>Max</label>
+                                    <input class="form-control" placeholder="$1,0000" type="number">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer p-0 border-0">
+                    <div class="col-6 m-0 p-0">
+                        <button type="button" class="btn border-top btn-lg btn-block" data-dismiss="modal">Close</button>
+                    </div>
+                    <div class="col-6 m-0 p-0">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="./Simple JS Cart_files/jquery.min.js(1).download"></script>
+    <script type="text/javascript" src="./Simple JS Cart_files/bootstrap.bundle.min.js.download"></script>
+    <!-- slick Slider JS-->
+    <script type="text/javascript" src="./Simple JS Cart_files/slick.min.js.download"></script>
+    <!-- Sidebar JS-->
+    <script type="text/javascript" src="./Simple JS Cart_files/hc-offcanvas-nav.js.download"></script>
+    <!-- Custom scripts for all pages-->
+    <script type="text/javascript" src="./Simple JS Cart_files/osahan.js.download"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+        import { getDatabase, set, ref, update, onValue, get,child } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCan3sUwtdAwRIY3F9LfH-h5UXe5tDC1Ts",
+            authDomain: "hotel-ordering-system-d60d1.firebaseapp.com",
+            databaseURL: "https://hotel-ordering-system-d60d1-default-rtdb.firebaseio.com",
+            projectId: "hotel-ordering-system-d60d1",
+            storageBucket: "hotel-ordering-system-d60d1.appspot.com",
+            messagingSenderId: "111728405719",
+            appId: "1:111728405719:web:b76f8abd3058b913045492"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+        
+
+        function profile(){
+            const user = auth.currentUser;
+            console.log(user.uid);            
+        }
+
+        document.getElementById("profil").onload= function(){
+            const user = auth.currentUser;
+            const dbRef = ref(getDatabase());
+            onAuthStateChanged(auth,(user)=>{
+            if(user){
+                console.log(user.email);               
+                get(child(dbRef, `users/${user.uid}`)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    console.log(snapshot.val());                    
+                } else {
+                    console.log("No data available");
+                }
+                }).catch((error) => {
+                console.error(error);
+                });
+            }
+        })
+        }
+
+        
+	push1.addEventListener('click',(e)=>{
+        var res="";
+        const user = auth.currentUser;
+     
+        console.log('push');
+        var timestamp=Date.now();
+        const db = getDatabase(app);
+        for (let [key, value] of map1) {
+          
+            set(ref(db, 'Order/' +timestamp+'/'+ key), {
+               count:value
+            });
+
+            res=res+key+":"+value+'<br>'+'<HR>';
+        }
+        set(ref(db, 'Order/' +timestamp+'/'+ 'price'), {
+               price:x
+            });  window.alert('Your order has been placed successfully!,Total price is '+x);
+            window.location.href='home.html';
+    });
+  
+    
+
+      </script>
+
+        <script>
+     
+    
+                
+    const charactersList = document.getElementById('charactersList');
+    const order = document.getElementById('order');
+    const searchBar = document.getElementById('searchBar');
+    let hpCharacters = [];
+    searchBar.addEventListener('keyup', (e) => {
+        const searchString = e.target.value.toLowerCase();
+    
+        const filteredCharacters = hpCharacters.filter((character) => {
+            return (
+                character.fname.toLowerCase().includes(searchString)  ||
+                character.restaurant.toLowerCase().includes(searchString) ||
+                character.type.toLowerCase().includes(searchString)
+            );
+        });
+        displayCharacters(filteredCharacters);
+    });
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        //body: raw,
+        redirect: 'follow'
+      };
+    
+    const loadCharacters = async () => {
+    
+        try {
+            fetch("https://hotel-ordering-system-d60d1-default-rtdb.firebaseio.com/Food items.json", requestOptions)
+            .then(response => response.json())
+            .then(response =>  {
+                hpCharacters = Object.values(response);
+                console.log(hpCharacters);
+            })
+            .catch(error => console.log('error', error));
+            /*console.log(requestOptions);
+             = await res.json();
+            displayCharacters(hpCharacters);*/
+        } catch (err) {
+            console.error(err);
+        }
+    };
+    var map1 = new Map();
+    var x=0;
+    function add (fid, price) {
+        console.log(price);
+        console.log( fid);
+        x=x+price;
+        var y;
+        if(map1.has(fid))
+        {
+            y=map1.get(fid);
+            map1.set(fid, y+1);
+        }else{
+            map1.set(fid, 1);
+        }
+        console.log(map1.get(fid));
+        
+      //  alert("Your order has been placed. Your total is: " + x);
+        placeorder();
+    }
+    
+    function remvove1 (fid,price) {
+        console.log(price);
+        console.log( fid);
+        
+        var y;
+        if(map1.has(fid))
+        {
+            y=map1.get(fid);
+            if(y>0)
+            {
+            map1.set(fid, y-1);
+           x=x-price;
+            }
+        }else{
+            map1.set(fid, 0);
+        }
+        console.log(map1.get(fid));
+        console.log(map1);
+        placeorder();
+      //  alert("Your order has been placed. Your total is: " + x);
+    }
+    function push(){
+        console.log('push');
+        const db = getDatabase(app);
+        for (let [key, value] of map1) {
+            set(ref(db, 'Order/' + user.uid), {
+                key:value
+            });
+            res=res+key+":"+value+'<br>'+'<HR>';
+    }
+}
+    function placeorder() {
+        
+         var res="";
+        for (let [key, value] of map1) {
+        if(value!=0)
+    res=res+key+":"+value+'<br>'+'<HR>';
+    }
+    res=res+"TOTAL PRICE:"+x;
+        order.innerHTML =res;
+      console.log(res);
+    
+    
+    
+    }
+    var displayCharacters = (characters) => {
+        const htmlString = characters
+            .map((character) => {
+                return `
+                <li class="character">
+    
+                    <h3>${character.fname}</h3>
+                    <p>Restaurant: ${character.restaurant}</p>
+                    <b>Price: ${character.price}</b>
+                    
+    
+                    
+                    <button id="bbutton" onclick = "remvove1('${character.fname}',${character.price})">remvove</button>
+                    <button id="bbutton" onclick = "add('${character.fname}',${character.price})">add</button>
+                    <img src="${character.image}"></img>
+                </li>
+            `;
+            })
+            .join('');
+        charactersList.innerHTML = htmlString;
+    };
+    function sup()
+    {
+      
+        document.getElementById('loginbox').style.display = "none";
+        document.getElementById('immg1').style.display = "BLOCK";
+    
+    }
+    function sup1()
+    {
+      
+        document.getElementById('loginbox').style.display = "block";
+        document.getElementById('immg1').style.display = "NONE";
+    
+    }
+    
+    loadCharacters();
+    </script>
+    
+    
+
+
+</body></html>
